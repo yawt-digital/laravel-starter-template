@@ -1,21 +1,24 @@
 <?php
 
 use App\Providers\RouteServiceProvider;
+use function Pest\Laravel\assertAuthenticated;
+use function Pest\Laravel\get;
+use function Pest\Laravel\post;
 
 test('registration screen can be rendered', function () {
-    $response = $this->get('/register');
-
-    $response->assertStatus(200);
+    get(route('register'))
+        ->assertSuccessful();
 });
 
 test('new users can register', function () {
-    $response = $this->post('/register', [
+    post('/register', [
         'name' => 'Test User',
         'email' => 'test@example.com',
         'password' => 'password',
         'password_confirmation' => 'password',
-    ]);
+    ])
+        ->assertSessionHasNoErrors()
+        ->assertRedirect(RouteServiceProvider::HOME);
 
-    $this->assertAuthenticated();
-    $response->assertRedirect(RouteServiceProvider::HOME);
+    assertAuthenticated();
 });

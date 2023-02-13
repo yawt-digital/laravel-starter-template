@@ -11,7 +11,7 @@
 
 ## Requirements
 
-- PHP (8.0 or newer)
+- PHP (8.1 or newer)
 - [Composer](https://getcomposer.org/) (2.1.3 or newer)
 - [Laravel 9.x requirements](https://laravel.com/docs/9.x/installation#server-requirements)
 

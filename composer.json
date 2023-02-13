@@ -1,29 +1,36 @@
 {
-    "name": "laravel/laravel",
+    "name": "yawt-digital/laravel-starter-template",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "A Laravel + InertiaJS Template powered by PHP and Typescript.",
+    "keywords": [],
     "license": "MIT",
     "require": {
-        "php": "^8.0.2",
-        "guzzlehttp/guzzle": "^7.2",
-        "inertiajs/inertia-laravel": "^0.5.4",
-        "laravel/framework": "^9.19",
-        "laravel/sanctum": "^2.8",
-        "laravel/tinker": "^2.7",
-        "pestphp/pest": "^1.16",
-        "pestphp/pest-plugin-laravel": "^1.1",
-        "tightenco/ziggy": "^1.0"
+        "php": "^8.1",
+        "based/momentum-lock": "^0.1.0",
+        "based/momentum-trail": "^0.2.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "inertiajs/inertia-laravel": "^0.6.9",
+        "laravel/framework": "^9.50.2",
+        "laravel/sanctum": "^2.15.1",
+        "laravel/tinker": "^2.8",
+        "spatie/enum": "^3.13",
+        "spatie/laravel-data": "^2.2.3",
+        "spatie/laravel-typescript-transformer": "^2.1.7"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.9.1",
-        "laravel/breeze": "^1.11",
-        "laravel/pint": "^1.0",
-        "laravel/sail": "^1.0.1",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.1",
-        "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0"
+        "barryvdh/laravel-ide-helper": "^2.12.3",
+        "fakerphp/faker": "^1.21",
+        "laravel/breeze": "^1.18.1",
+        "laravel/pint": "^1.4.1",
+        "laravel/sail": "^1.19",
+        "mockery/mockery": "^1.5.1",
+        "nunomaduro/collision": "^6.4",
+        "nunomaduro/larastan": "^2.4",
+        "pestphp/pest": "^1.22.3",
+        "pestphp/pest-plugin-laravel": "^1.4",
+        "phpunit/phpunit": "^9.5.28",
+        "spatie/laravel-ignition": "^1.6.4",
+        "spatie/laravel-stubs": "^2.5.2"
     },
     "autoload": {
         "psr-4": {
@@ -51,7 +58,20 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "pint": "./vendor/bin/pint"
+        "helpers": [
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:models --nowrite",
+            "@php artisan ide-helper:eloquent"
+        ],
+        "pint": [
+            "./vendor/bin/pint"
+          ],
+        "pest": [
+            "./vendor/bin/pest"
+        ],
+        "stan": [
+            "./vendor/bin/phpstan analyse"
+        ]
     },
     "extra": {
         "laravel": {

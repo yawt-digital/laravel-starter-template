@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "strict": true,
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "esModuleInterop": true,
+      "lib": ["ESNext", "DOM"],
+      "skipLibCheck": true,
+      "types": ["vite/client", "node"],
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["resources/*"]
+      }
+    },
+    "include": ["resources/**/*.ts", "resources/**/*.d.ts", "resources/**/*.vue"]
+  }

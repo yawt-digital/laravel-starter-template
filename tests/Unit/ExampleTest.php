@@ -1,5 +1,5 @@
 <?php
 
-test('example', function () {
-    expect(true)->toBeTrue();
-});
+use function PHPUnit\Framework\assertTrue;
+
+test('true is not false', fn () => assertTrue(true != false));
