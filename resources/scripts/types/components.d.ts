@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    LayoutGuest: typeof import('@/views/layouts/guest/layout-guest.vue')['default']
     Logo: typeof import('./../../views/components/logo.vue')['default']
   }
 }
