@@ -1,0 +1,64 @@
+name: Run Code Linters
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**.php"
+      - "**.js"
+      - "**.ts"
+      - "**.vue"
+
+jobs:
+  phpstan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Cache composer dependencies
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: composer-${{ hashFiles('composer.lock') }}
+
+      - name: Run composer install
+        run: composer install -n --prefer-dist
+
+      - name: Run PHPStan
+        run: ./vendor/bin/phpstan --error-format=github
+
+  eslint_type_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: yarn-${{ hashFiles('yarn.lock') }}
+
+      - name: Setup Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Install dependencies
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+
+      - name: Check Typescript
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: type-check
+
+      - name: Run ESLint
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: lint
