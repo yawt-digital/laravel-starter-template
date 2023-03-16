@@ -16,3 +16,4 @@ yarn-error.log
 /.vscode
 /resources/scripts/types/routes.d.ts
 /bootstrap/ssr
+_ide_helper*

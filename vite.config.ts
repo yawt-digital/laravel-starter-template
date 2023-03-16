@@ -1,10 +1,10 @@
-import { defineConfig } from "vite"
-import { watch } from "vite-plugin-watch"
-import laravel from "laravel-vite-plugin"
-import vue from "@vitejs/plugin-vue"
-import eslintPlugin from "vite-plugin-eslint"
-import autoimport from "unplugin-auto-import/vite"
-import components from "unplugin-vue-components/vite"
+import { defineConfig } from "vite";
+import { watch } from "vite-plugin-watch";
+import laravel from "laravel-vite-plugin";
+import vue from "@vitejs/plugin-vue";
+import eslintPlugin from "vite-plugin-eslint";
+import autoimport from "unplugin-auto-import/vite";
+import components from "unplugin-vue-components/vite";
 
 export default defineConfig(({ ssrBuild }) => {
   return {
@@ -53,25 +53,25 @@ export default defineConfig(({ ssrBuild }) => {
         resolvers: [
           // inertia components
           (name: string) => {
-            const components = ["Link", "Head"]
+            const components = ["Link", "Head"];
 
             if (components.includes(name)) {
               return {
                 name: name,
                 from: "@inertiajs/vue3",
-              }
+              };
             }
           },
 
           // layouts
           (name: string) => {
             if (name.startsWith("Layout")) {
-              const componentName = name.substring("Layout".length).toLowerCase()
+              const componentName = name.substring("Layout".length).toLowerCase();
 
               return {
                 name: "default",
                 from: `@/views/layouts/${componentName}/layout-${componentName}.vue`,
-              }
+              };
             }
           },
         ],
@@ -87,5 +87,5 @@ export default defineConfig(({ ssrBuild }) => {
         onInit: !ssrBuild,
       }),
     ],
-  }
-})
+  };
+});

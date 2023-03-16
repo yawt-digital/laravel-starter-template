@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - name: Call Forge Hook
-      #   run: curl ${{ secrets.FORGE_STAGE_HOOK }}
+      - name: Call Forge Hook
+        run: curl ${{ secrets.FORGE_STAGE_HOOK }}
