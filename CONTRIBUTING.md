@@ -24,6 +24,19 @@ hotfix/error-500-while-sending-emails
 bug/user-restricted-from-accessing-settings-page
 ```
 
+# Commit Messages
+
+When committing we use the [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/#summary) standard. This is enforced by [commitlint](https://commitlint.js.org/) and [husky](https://typicode.github.io/husky/).
+
+It is also recommended to uncomment the lines mentioned inside [`commitlint.config.ts`](./commitlint.config.ts) which enforce that the commit also be referencing a specific issue from our project management software, Linear.
+
+An example commit would look like so:
+
+```bash
+git add .
+git commit -m "feat: YWT-123 implemented the style updates to the button component"
+```
+
 # Coding Style
 
 We are following the [PSR-12](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-12-extended-coding-style-guide.md)
