@@ -2,13 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  prefix: "ywt-",
-  content: [
-    "./storage/framework/views/*.php",
-    "./resources/**/*.blade.php",
-    "./resources/**/*.ts",
-    "./resources/**/*.vue",
-  ],
+  content: ["./storage/framework/views/*.php", "./resources/**/*.blade.php", "./resources/**/*.{ts,js,vue}"],
   theme: {
     extend: {
       fontFamily: {
