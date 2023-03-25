@@ -1,6 +1,6 @@
 {
     "name": "yawt-digital/laravel-starter-template",
-    "type": "project",
+    "type": "template",
     "description": "A Laravel + InertiaJS Template powered by PHP and Typescript.",
     "keywords": [],
     "license": "MIT",
