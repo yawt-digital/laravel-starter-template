@@ -11,13 +11,12 @@
 
 ## Requirements
 
-- PHP (8.1 or newer)
-- [Composer](https://getcomposer.org/) (2.1.3 or newer)
-- [Laravel 9.x requirements](https://laravel.com/docs/9.x/installation#server-requirements)
+- PHP (8.2 or newer)
+- [Composer](https://getcomposer.org/) (2.2.0 or newer)
 
 ## Installation
 
-> 💡 You can skip steps 2-5 if you're using [Sail](https://laravel.com/docs/9.x/sail). After cloning the repository just run `bash bin/setup.sh` in your terminal.
+> 💡 You can skip steps 2-5 if you're using [Sail](https://laravel.com/docs/10.x/sail). After cloning the repository just run `bash bin/setup.sh` in your terminal.
 
 1. Clone the repository
 2. Install the composer dependencies by running `composer install`.

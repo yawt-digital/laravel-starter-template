@@ -47,7 +47,6 @@
     "@inertiajs/vue3": "^1.0.0",
     "@vue/server-renderer": "^3.2.45",
     "@vueuse/core": "^9.7.0",
-    "dayjs": "^1.11.6",
     "momentum-lock": "^0.1.2",
     "momentum-paginator": "^1.0.6",
     "momentum-trail": "^0.3.1",

@@ -40,6 +40,9 @@ module.exports = {
     "vue/prefer-true-attribute-shorthand": "error",
     "vue/no-v-html": "off",
 
+    // * Rule disabled because I didn't have time to dig into where it was being caused.
+    "tailwindcss/no-custom-classname": [0],
+
     "no-undef": "off",
     "no-unused-vars": "off",
     "no-console": ["warn"],

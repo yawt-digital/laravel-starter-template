@@ -2,7 +2,6 @@ import "@/css/app.css";
 
 import { createSSRApp, h, DefineComponent } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
-/** @ts-expect-error */
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
 import { Page } from "@inertiajs/core";
