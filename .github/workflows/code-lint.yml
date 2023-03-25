@@ -37,6 +37,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Cache composer dependencies
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: composer-${{ hashFiles('composer.lock') }}
+
+      - name: Run composer install
+        run: composer install -n --prefer-dist
+
       - name: Cache yarn dependencies
         uses: actions/cache@v2
         with:
@@ -52,6 +61,11 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install
+
+      - name: Build project
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build-only
 
       - name: Check Typescript
         uses: borales/actions-yarn@v4
