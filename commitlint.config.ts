@@ -6,8 +6,7 @@ const config = {
   },
   parserPreset: {
     parserOpts: {
-      // TODO: Uncomment this and line 4 to validate issue/ticket numbers
-      //   issuePrefixes: ["YWT-"],
+      //   issuePrefixes: [":issue-prefix"],
     },
   },
 };
