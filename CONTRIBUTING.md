@@ -19,9 +19,9 @@ Each branch should contain only related changes to the initial purpose of the br
 Valid examples:
 
 ```
-feature/add-email-report
-hotfix/error-500-while-sending-emails
-bug/user-restricted-from-accessing-settings-page
+feature/YWT-123-add-email-report
+hotfix/YWT-123-error-500-while-sending-emails
+bug/YWT-123-user-restricted-from-accessing-settings-page
 ```
 
 # Commit Messages
