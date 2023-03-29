@@ -13,6 +13,8 @@
 
 - PHP (8.2 or newer)
 - [Composer](https://getcomposer.org/) (2.2.0 or newer)
+- Node (18.x or newer)
+- Yarn
 
 ## Installation
 
