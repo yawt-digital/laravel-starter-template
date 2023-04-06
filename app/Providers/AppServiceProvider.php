@@ -17,5 +17,19 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::unguard();
         Model::shouldBeStrict(! App::isProduction());
+
+        if (App::isProduction()) {
+            Model::handleLazyLoadingViolationUsing(function ($model, $relation) {
+                $class = get_class($model);
+
+                info("Attempted to lazy load [{$relation}] on model [{$class}].");
+            });
+
+            Model::handleMissingAttributeViolationUsing(function ($model, $key) {
+                $class = get_class($model);
+
+                info("Attempted to access [{$key}] on model [{$class}].");
+            });
+        }
     }
 }
