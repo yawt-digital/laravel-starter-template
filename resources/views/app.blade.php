@@ -7,7 +7,7 @@
 
     <title inertia>{{ config('app.name', 'Laravel Template') }}</title>
 
-    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Poppins:wght@400;600;700&display=swap">
 
     @vite(["resources/scripts/app.ts", "resources/views/pages/{$page['component']}.vue"])
     @inertiaHead

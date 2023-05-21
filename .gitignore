@@ -13,7 +13,6 @@ auth.json
 npm-debug.log
 yarn-error.log
 /.idea
-/.vscode
 /resources/scripts/types/routes.d.ts
 /bootstrap/ssr
 _ide_helper*

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return inertia('welcome');
+    return inertia('welcome', ['appVersion' => Application::VERSION]);
 });
 
 require __DIR__ . '/auth.php';
