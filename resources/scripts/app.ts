@@ -8,7 +8,7 @@ import Toast from "vue-toastification";
 import { notifications } from "./plugins/notifications";
 import routes from "./routes/routes.json";
 
-const appName = window.document.getElementsByTagName("title")[0]?.innerText || "Laravel Template";
+const appName = window.document.getElementsByTagName("title")[0]?.innerText || "YAWT Template";
 
 createInertiaApp({
   title: (title: string) => (title ? `${appName} — ${title}` : `${appName}`),

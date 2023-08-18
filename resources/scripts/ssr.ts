@@ -9,7 +9,7 @@ import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { trail } from "momentum-trail";
 import routes from "./routes/routes.json";
 
-const appName = "mixjobs";
+const appName = import.meta.env.VITE_APP_NAME || "YAWT Template";
 
 createServer((page: Page) =>
   createInertiaApp({
